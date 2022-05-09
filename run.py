@@ -36,8 +36,13 @@ def get_ship_location():
         column = input('Please enter a ship column a-h')
     return int(row) - 1, letters_to_numbers[column]
 
-def count_hit_ships(): 
-    pass 
+def count_hit_ships(board): 
+    count = 0 
+    for row in board: 
+        for column in row:
+            if column == 'X': 
+                count += 1
+    return count  
 
 create_ships()
 turns = 10 
