@@ -36,9 +36,9 @@ def get_ship_location():
     while row not in '12345678':
         print('Invalid row')
         row = input('Please choose the row you want to strike (any number 1-8):  \n')
-    column = input('Please choose the letter of the column you want to strike (any letter  a-h):  \n')
+    column = input('Please choose the letter of the column you want to strike (any letter a-h):  \n')
     column = column.upper()
-    while column not in 'ABCDEFGH':
+    if column not in 'ABCDEFGH':
         print('Please enter a valid column')
         column = input('Please enter a ship column A-H').upper()
     return int(row) - 1, LETTERS_TO_NUMBERS[column]
@@ -57,10 +57,26 @@ def valid_username(username):
         return False
     return True
 
+def setup_new_game():
+    print('Welcome to Battleships')
+    username = ''
+    while username == '':
+        input_name = input('Please enter your username:  ')
+        if valid_username(input-name):
+            username = input_name
+            
+    USERNAME = username
+
 create_ships(HIDDEN_BOARD)
+fill_in_blanks(HIDDEN_BOARD)
+fill_in_blanks(GUESS_BOARD)
+
+setup_new_game()
+
+def play_game():
 turns = 10
-print('Welcome to Battleships')
 while turns > 0:
+    print_board(HIDDEN_BOARD)
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
@@ -80,3 +96,5 @@ while turns > 0:
     if turns == 0: 
         print('Game Over')
         break
+    
+play_game()
