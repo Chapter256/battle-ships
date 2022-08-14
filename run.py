@@ -1,7 +1,7 @@
 # Battleships game legend
-# X for placing battleship and hitting battleship
-# ' ' for all available space
-# ' - ' for missed shots
+# '_' for all available space
+# '-' for missed shots
+# 'X' for placing battleship and hitting battleship
 
 from random import randint
 
