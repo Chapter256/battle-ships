@@ -30,7 +30,7 @@ def get_ship_location():
         row = input('Please choose the row you want to strike (any number 1-8):  \n')
     column = input('Please choose the letter of the column you want to strike (any letter  a-h):  \n')
     column = column.upper()
-    while column not in 'abcdefgh':
+    while column not in 'ABCDEFGH':
         print('Please enter a valid column')
         column = input('Please enter a ship column A-H').upper()
     return int(row) - 1, LETTERS_TO_NUMBERS[column]
