@@ -30,11 +30,11 @@ def fill_in_blanks(board):
             val = board[row_num] [col_num]
             if val != 'X' and val != '-':
                 board[row_num] [col_num] = '_'
-        
+ 
 def get_ship_location():
     row = input('Please choose the row you want to strike (any number 1-8):\n')
     while row not in '12345678':
-        print('Please enter a valid row')
+        print('Invalid row')
         row = input('Please choose the row you want to strike (any number 1-8):  \n')
     column = input('Please choose the letter of the column you want to strike (any letter  a-h):  \n')
     column = column.upper()
