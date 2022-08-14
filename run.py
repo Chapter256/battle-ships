@@ -13,7 +13,7 @@ def print_board(board):
     print(' A B C D E F G H')
     row_number = 1
     for row in board:
-        print("%d|%s|" % (row_number, "|".join(row)))
+        print("%d|_%s|" % (row_number, "|_".join(row)))
         row_number += 1
 
 def create_ships(board):
