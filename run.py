@@ -47,7 +47,7 @@ create_ships(HIDDEN_BOARD)
 turns = 10
 print('Welcome to Battleships')
 while turns > 0:
-    print__board(GUESS_BOARD)
+    print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
         print('You already guessed that')
@@ -62,7 +62,7 @@ while turns > 0:
     if count_hit_ships(GUESS_BOARD) == 5:
         print('Congrats, you have sunk all the battleships!')
         break
-    print('You have' + str(turns) + 'turns remaining')
+    print('You have' + str(turns) + ' turns remaining')
     if turns == 0: 
         print('Game Over')
         break
