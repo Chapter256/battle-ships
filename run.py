@@ -23,7 +23,14 @@ def create_ships(board):
         while board[ship_row][ship_column] == 'X':
             ship_row, ship_column = randint(0, 7), randint(0, 7)
         board[ship_row][ship_column] = 'X'
-
+      
+def fill_in_blanks(board):
+    for row_num in range (len(board)):
+        for col_num in range (len(board)):
+            val = board[row_num] [col_num]
+            if val != 'X' and val != '-':
+                board[row_num] [col_num] = '_'
+        
 def get_ship_location():
     row = input('Please choose the row you want to strike (any number 1-8):\n')
     while row not in '12345678':
