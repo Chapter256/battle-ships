@@ -1,31 +1,31 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships 
 
-Welcome Camilla Sonesson,
+This project is for a Battleship game using Python. It allows the player to play a single-player version against a computerized player.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## Demo
+[Live project can be viewed here.](https://battle-ships-cs.herokuapp.com/)
 
-## Reminders
+## Table of Content
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## User Stories: 
+As a user I want to: 
+* Clearly and instantly see what the game is. 
+* Easy way to read game instructions. 
+* Play a fun game. 
+ 
+## Site Aims: 
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Planning 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## How to play: 
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
+## Deployment: 
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
------
-Happy coding!
+## Credits 
+* [Code Institute](https://github.com/Code-Institute-Org/python-essentials-template) for providing the template. The template gave me a mock terminal to display my game via a webpage.
+* [Knowledge Mavens](https://www.youtube.com/watch?v=tF1WRCrd_HQ&t=0s&ab_channel=freeCodeCamp.org) Youtube video tutorial on how to build a single player Battleship game. 
