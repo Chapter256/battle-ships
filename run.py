@@ -11,14 +11,14 @@ LETTERS_TO_NUMBERS = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H
 USERNAME = ''
 
 def print_board(board):
-    print(' A B C D E F G H')
+    print('  A B C D E F G H')
     row_number = 1
     for row in board:
         print("%d|_%s|" % (row_number, "|_".join(row)))
         row_number += 1
 
 def create_ships(board):
-    for ship in range(5):
+    for _ in range(3):
         ship_row, ship_column = randint(0, 7), randint(0, 7)
         while board[ship_row][ship_column] == 'X':
             ship_row, ship_column = randint(0, 7), randint(0, 7)
@@ -48,7 +48,7 @@ def valid_username(username):
     length = len(username)
     if length > 15 or length < 1: 
         return False
-    return True 
+    return True
 
 create_ships(HIDDEN_BOARD)
 turns = 10
