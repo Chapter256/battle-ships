@@ -28,10 +28,11 @@ def get_ship_location():
     while row not in '12345678':
         print('Please enter a valid row')
         row = input('Please choose the row you want to strike (any number 1-8):  \n')
-    column = input('Please choose the letter of the column you want to strike (any letter  a-h):  \n').uppercase()
+    column = input('Please choose the letter of the column you want to strike (any letter  a-h):  \n')
+    column = column.upper()
     while column not in 'abcdefgh':
         print('Please enter a valid column')
-        column = input('Please enter a ship column A-H').uppercase()
+        column = input('Please enter a ship column A-H').upper()
     return int(row) - 1, LETTERS_TO_NUMBERS[column]
 
 def count_hit_ships(board):
