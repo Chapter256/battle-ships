@@ -80,7 +80,6 @@ def valid_column(col):
     return False
 
 
-def setup_new_game():
     print('Welcome to Battleships')
     username = ''
     while username == '':
