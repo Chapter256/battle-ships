@@ -95,12 +95,10 @@ def clear_boards():
     for row_num in range(len(GUESS_BOARD)):
         for col_num in range(len(GUESS_BOARD[row_num])):
             GUESS_BOARD[row_num][col_num] = ''
-create_ships(HIDDEN_BOARD)
-fill_in_blanks(HIDDEN_BOARD)
-fill_in_blanks(GUESS_BOARD)
+    create_ships(HIDDEN_BOARD)
+    fill_in_blanks(HIDDEN_BOARD)
+    fill_in_blanks(GUESS_BOARD)
 
-
-# setup_new_game()
 
 def play_game():
 turns = 10
