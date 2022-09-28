@@ -134,6 +134,6 @@ def play_game():
 while PLAY == True:
     clear_boards()
     PLAY = play_game()
-    
+ 
 
 print('goodbye')
