@@ -1,7 +1,5 @@
 # Battleships 
 
-This project is for a Battleship game using Python. It allows the player to play a single-player version against a computerized player.
-
 ## Demo
 [Live project can be viewed here.](https://battle-ships-cs.herokuapp.com/)
 
@@ -9,6 +7,9 @@ This project is for a Battleship game using Python. It allows the player to play
 
 
 
+## Introduction 
+
+This project is for a Battleship game using Python. It allows the player to play a single-player version against a computerized player.
 
 ## User Stories: 
 As a user I want to: 
