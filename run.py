@@ -1,6 +1,6 @@
 # Battleships game legend
 # '_' for all available space
-# '-' for missed shots
+# '*' for missed shots
 # 'X' for placing battleship and hitting battleship
 
 from random import randint
@@ -27,7 +27,7 @@ def fill_in_blanks(board):
     for row_num in range (len(board)):
         for col_num in range (len(board)):
             val = board[row_num] [col_num]
-            if val != 'X' and val != '-':
+            if val != 'X' and val != '*':
                 board[row_num] [col_num] = '_'
  
 def get_ship_location():
@@ -78,7 +78,7 @@ while turns > 0:
     print_board(HIDDEN_BOARD)
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
-    if GUESS_BOARD[row][column] == '-':
+    if GUESS_BOARD[row][column] == '*':
         print('You already guessed that')
     elif HIDDEN_BOARD[row][column] == 'X':
         print('Congrats! You hit a battleship')
@@ -86,7 +86,7 @@ while turns > 0:
         turns -= 1
     else:
         print('You missed!')
-        GUESS_BOARD[row][column] = '-'
+        GUESS_BOARD[row][column] = '*'
         turns -= 1
     if count_hit_ships(GUESS_BOARD) == 5:
         print('Congrats, you have sunk all the battleships!')
