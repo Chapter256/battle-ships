@@ -7,10 +7,9 @@
 2. [How To Play](#how-to-play)
 3. [Features](#features)
 4. [User Stories](#user-stories)
-5. [Planning](#planning)
-6. [Testing](#testing)
-7. [Deployment](#deployment)
-8. [Credits](#credits)
+5. [Testing](#testing)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
 
 
 ## Introduction 
@@ -26,8 +25,6 @@ As a user I want to:
 * Clearly and instantly see what the game is. 
 * Easy way to read game instructions. 
 * Play a fun game. 
-
-## Planning 
 
 ## Testing
 
