@@ -76,8 +76,8 @@ while turns > 0:
     print_board(HIDDEN_BOARD)
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
-    if GUESS_BOARD[row][column] == '*':
-        print('You already guessed that')
+    if GUESS_BOARD[row][column] == '*' or GUESS_BOARD [row][column] == 'X':
+        print('You already guessed that. Guess again...')
     elif HIDDEN_BOARD[row][column] == 'X':
         print('Congrats! You hit a battleship')
         GUESS_BOARD[row][column] = 'X'
