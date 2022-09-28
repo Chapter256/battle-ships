@@ -5,9 +5,11 @@
 
 from random import randint
 
+
 HIDDEN_BOARD = [[''] * 8 for x in range(8)]
 GUESS_BOARD = [[''] * 8 for x in range(8)]
 LETTERS_TO_NUMBERS = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7}
+
 
 def print_board(board):
     print('  A B C D E F G H')
@@ -16,20 +18,23 @@ def print_board(board):
         print("%d|_%s|" % (row_number, "|_".join(row)))
         row_number += 1
 
+
 def create_ships(board):
     for _ in range(10):
         ship_row, ship_column = randint(0, 7), randint(0, 7)
         while board[ship_row][ship_column] == 'X':
             ship_row, ship_column = randint(0, 7), randint(0, 7)
         board[ship_row][ship_column] = 'X'
-      
+
+
 def fill_in_blanks(board):
     for row_num in range (len(board)):
         for col_num in range (len(board)):
             val = board[row_num] [col_num]
             if val != 'X' and val != '*':
                 board[row_num] [col_num] = '_'
- 
+
+
 def get_ship_location():
     row = input('Please choose the row you want to strike (any number 1-8):\n')
     while row not in '12345678' or len(row) > 1:
@@ -42,6 +47,7 @@ def get_ship_location():
         column = input('Please enter a ship column a-h').upper()
     return int(row) - 1, LETTERS_TO_NUMBERS[column]
 
+
 def count_hit_ships(board):
     count = 0
     for row in board:
@@ -50,11 +56,29 @@ def count_hit_ships(board):
                 count += 1
     return count
 
+
 def valid_username(username):
     length = len(username)
     if length > 15 or length < 1: 
         return False
     return True
+
+
+def valid_row(row):
+    valid_row_nums = ['1', '2', '3', '4', '5', '6', '7', '8']
+    for str in valid_row_nums:
+        if row == str: 
+            return True
+    return False
+
+
+def valid_column(col):
+    valid_col_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+    for str in valid_col_letters:
+        if col == str: 
+            return True
+    return False
+
 
 def setup_new_game():
     print('Welcome to Battleships')
@@ -64,9 +88,11 @@ def setup_new_game():
         if valid_username(input_name):
             username = input_name
 
+
 create_ships(HIDDEN_BOARD)
 fill_in_blanks(HIDDEN_BOARD)
 fill_in_blanks(GUESS_BOARD)
+
 
 # setup_new_game()
 
