@@ -32,14 +32,14 @@ def fill_in_blanks(board):
  
 def get_ship_location():
     row = input('Please choose the row you want to strike (any number 1-8):\n')
-    while row not in '12345678':
+    while row not in '12345678' or len(row) > 1:
         print('Invalid row')
         row = input('Please choose the row you want to strike (any number 1-8):  \n')
     column = input('Please choose the letter of the column you want to strike (any letter a-h):  \n')
     column = column.upper()
-    if column not in 'ABCDEFGH':
+    if column not in 'ABCDEFGH' or len(column) > 1:
         print('Please enter a valid column')
-        column = input('Please enter a ship column A-H').upper()
+        column = input('Please enter a ship column a-h').upper()
     return int(row) - 1, LETTERS_TO_NUMBERS[column]
 
 def count_hit_ships(board):
