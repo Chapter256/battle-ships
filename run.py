@@ -61,16 +61,14 @@ def setup_new_game():
     username = ''
     while username == '':
         input_name = input('Please enter your username:  ')
-        if valid_username(input-name):
+        if valid_username(input_name):
             username = input_name
-            
-    USERNAME = username
 
 create_ships(HIDDEN_BOARD)
 fill_in_blanks(HIDDEN_BOARD)
 fill_in_blanks(GUESS_BOARD)
 
-setup_new_game()
+# setup_new_game()
 
 def play_game():
 turns = 10
