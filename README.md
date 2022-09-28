@@ -1,6 +1,5 @@
 # Battleships 
 
-## Demo
 [Live project can be viewed here.](https://battle-ships-cs.herokuapp.com/)
 
 ## Table of Content
