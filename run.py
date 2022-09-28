@@ -132,7 +132,7 @@ def play_game():
     return False
 
 while PLAY == True:
-    clear clear_boards()
+    clear_boards()
     PLAY = play_game()
     
 
