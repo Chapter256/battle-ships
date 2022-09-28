@@ -18,7 +18,7 @@ def print_board(board):
         row_number += 1
 
 def create_ships(board):
-    for _ in range(3):
+    for _ in range(10):
         ship_row, ship_column = randint(0, 7), randint(0, 7)
         while board[ship_row][ship_column] == 'X':
             ship_row, ship_column = randint(0, 7), randint(0, 7)
