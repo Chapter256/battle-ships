@@ -86,8 +86,15 @@ def valid_column(col):
         input_name = input('Please enter your username:  ')
         if valid_username(input_name):
             username = input_name
+            
 
-
+def clear_boards():
+    for row_num in range(len(HIDDEN_BOARD)):
+        for col_num in range(len(HIDDEN_BOARD[row_num])):
+            HIDDEN_BOARD[row_num][col_num] = ''
+    for row_num in range(len(GUESS_BOARD)):
+        for col_num in range(len(GUESS_BOARD[row_num])):
+            GUESS_BOARD[row_num][col_num] = ''
 create_ships(HIDDEN_BOARD)
 fill_in_blanks(HIDDEN_BOARD)
 fill_in_blanks(GUESS_BOARD)
