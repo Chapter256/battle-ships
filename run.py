@@ -16,7 +16,7 @@ def print_board(board):
     print('  ---------------')
     row_number = 1
     for row in board:
-        print("%d|_%s|" % (row_number, "|_".join(row)))
+        print("%d|%s|" % (row_number, "|".join(row)))
 
 
 def create_ships(board):
