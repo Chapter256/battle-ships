@@ -45,7 +45,7 @@ def get_ship_location():
     if column not in 'ABCDEFGH' or len(column) > 1:
         print('Please enter a valid column')
         column = input('Please enter a ship column a-h').upper()
-    return int(row) - 1, LETTERS_TO_NUMBERS[column]
+    return int(row) - 1, letters_to_numbers[column]
 
 
 def count_hit_ships(board):
