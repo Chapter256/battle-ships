@@ -1,6 +1,7 @@
 import random
 
 # Battleships game legend
-# ' _ ' for all available space
+# ' _ ' for all empty space
 # ' * ' for missed shots
-# ' X ' for placing the battleship and hitting the battleship
+# ' X ' for hitting part of a ship
+# ' 0 ' for part of a ship
