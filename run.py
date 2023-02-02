@@ -22,3 +22,22 @@ num_of_ships_sunk = 0
 ship_positions = [[]]
 # Global variable for alphabet
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+
+def validate_grid_and_place_ship(start_row, end_row, start_col, end_col):
+    """Will check the row or column to see if it is safe to place a ship there."""
+    global grid
+    global ship_positions
+    
+    all_valid = True
+    for r in range(start_row, end_row):
+        for c in range(start_col, end_col):
+            if grid[r][c] != ",":
+                all_valid = False
+                break
+    if all_valid:
+        ship_positions.append([start_row, end_row, start_col, end_col])
+        for r in range(start_row, end_row):
+            for c in range(start_col, end_col):
+                grid[r][c] = "0"
+    return all_valid
