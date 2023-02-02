@@ -125,3 +125,38 @@ def print_grid():
     for i in range(len(grid[0])):
         print(str(i), end=" ")
     print("")
+
+def accept_valid_bullet_placement():
+    """Will get valid row and column to place bullet shot"""
+    global alphabet
+    global grid
+
+    is_valid_placement = False
+    row = -1
+    col = -1
+    while is_valid_placement is False: 
+        placement = input("Enter row (A-J) and column (0-9) such as A3: ")
+        placement = placement.upper()
+        if len(placement) <= 0 or lend(placement) > 2:
+            print("Error: Please enter only one row and column such as A3")
+            continue
+        row = placement[0]
+        col = placement[1]
+        if not row.isalpha() or not col.isnumeric():
+            print("Erro: Please enter letter (A-J) for row and (0-9) for column")
+            continue
+        col = int(col)
+        if not (-1 < row < grid_size):
+            print("Erro: Please enter letter (A-J) for row and (0-9) for column")
+            continue
+        col = int(col)
+        if not (-1 < col < grid_size):
+            print("Erro: Please enter letter (A-J) for row and (0-9) for column")
+            continue
+        if grid[row][col] == "#" or grid[row][col] == "X":
+            print("You have already shot a bullet here, pick somewhere else")
+            continue
+        if grid[row][col] == "." or grid[row][col] == "0":
+            is_valid_placement = True
+ 
+    return row, col
