@@ -1,10 +1,10 @@
 import random
 
 # Battleships game legend
-# ' _ ' for all empty space
-# ' * ' for missed shots
-# ' X ' for hitting part of a ship
-# ' 0 ' for part of a ship
+# "." = for all empty space
+# "0" = part of a ship
+# "X" = for hitting part of a ship
+# "#" = a miss because it didn't hit a ship
 
 # Global variable for grid
 grid = [[]]
@@ -25,7 +25,7 @@ alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 def validate_grid_and_place_ship(start_row, end_row, start_col, end_col):
-    """Will check the row or column to see if it is safe to place a ship there."""
+    """Will check the row or column to see if it is safe to place a ship there"""
     global grid
     global ship_positions
 
