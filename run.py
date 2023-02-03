@@ -217,3 +217,26 @@ def check_for_game_over():
     elif bullets_left <= 0:
         print("You ran out of bullets and lost! Try again next time!")
         game_over = True
+
+def main():
+    """Main entry point of the application, will run the game loop"""
+    global game_over
+    
+    print("-----Welcome to Battleships------")
+    print("You have 50 bullets to take down 8 ships, may the battle begin!")
+    
+    create_grid()
+    
+    while game_over is False:
+        print_grid()
+        print("Number of ships remaining: " + str(num_of_ships - num_of_ships_sunk))
+        print("Number of bullets left: " + str(bullets_left))
+        shoot_bullet()
+        print("----------------------------")
+        print("")
+        check_for_game_over()
+        
+        
+if __name__ == '__main__':
+    """Will be called when program is being run from the terminal"""
+    main()
