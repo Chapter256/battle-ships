@@ -1,4 +1,6 @@
 import random
+import time
+
 
 # Battleships game legend
 # "." = for all empty space
