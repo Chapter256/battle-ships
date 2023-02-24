@@ -160,7 +160,7 @@ def accept_valid_bullet_placement():
             print("Error: Please enter only one row and column such as A3")
             continue
         row = placement[0]
-        col = placement[0]
+        col = placement[1]
         if not row.isalpha() or not col.isnumeric():
             print("Error: Please enter letter (A-J) for row and (0-9) for column")
             continue
