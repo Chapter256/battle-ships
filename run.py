@@ -178,6 +178,9 @@ def accept_valid_bullet_placement():
         if grid[row][col] == "." or grid[row][col] == "O":
             is_valid_placement = True
 
+        except (AttributeError(, ValueError(, IndexError):
+        print("Please enter letter (A-J) for row and (0-9) for column"")
+              
     return row, col
 
 
