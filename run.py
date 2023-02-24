@@ -2,7 +2,7 @@ import random
 import time
 
 """
-    ------BATTLESHIPS------
+    -------BATTLESHIPS-------
     Pre-reqs: Loops, Strings, Arrays, 2D Arrays, Global Variables, Methods
     How the game works:
     1. A 10x10 grid will have an 8 ship varible length randomly placed about
@@ -192,7 +192,7 @@ def check_for_ship_sunk(row, col):
         start_col = position[2]
         end_col = position[3]
         if start_row <= row <= end_row and start_col <= col <= end_col:
-         
+            # Ship found, check if it sunk
             for r in range(start_row, end_row):
                 for c in range(start_col, end_col):
                     if grid[r][c] != "X":
