@@ -160,7 +160,7 @@ def accept_valid_bullet_placement():
             print("Error: Please enter only one row and column such as A3")
             continue
         row = placement[0]
-        col = placement[1]
+        col = placement[0]
         if not row.isalpha() or not col.isnumeric():
             print("Error: Please enter letter (A-J) for row and (0-9) for column")
             continue
@@ -177,12 +177,10 @@ def accept_valid_bullet_placement():
             continue
         if grid[row][col] == "." or grid[row][col] == "O":
             is_valid_placement = True
-        except (AttributeError, ValueError, IndexError):
-        print("Please enter letter (A-J) for row and (0-9) for column")
-              
+
     return row, col
 
-
+        
 def check_for_ship_sunk(row, col):
     """If all parts of a ship are shot it will sink"""
     global ship_positions
