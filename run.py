@@ -44,7 +44,7 @@ def validate_grid_and_place_ship(start_row, end_row, start_col, end_col):
 
 
 def try_to_place_ship_on_grid(row, col, direction, length):
-    """Based on direction, will call helper method to try and place a ship on the grid"""
+    """Based on direction will call helper method to try and place a ship on the grid"""
     global grid_size
 
     start_row, end_row, start_col, end_col = row, row + 1, col, col + 1
@@ -70,8 +70,9 @@ def try_to_place_ship_on_grid(row, col, direction, length):
 
     return validate_grid_and_place_ship(start_row, end_row, start_col, end_col)
 
+
 def create_grid():
-    """Will create a 10x10 grid and randomly place down ships 
+    """Will create a 10x10 grid and randomly place down ships
     of different sizes in different directions"""
     global grid
     global grid_size
@@ -100,7 +101,8 @@ def create_grid():
         ship_size = random.randint(3, 5)
         if try_to_place_ship_on_grid(random_row, random_col, direction, ship_size):
             num_of_ships_placed += 1
-    
+
+
 def print_grid():
     """Will print the grid with rows A-J and columns 0-9"""
     global grid
@@ -121,10 +123,12 @@ def print_grid():
             else:
                 print(grid[row][col], end=" ")
         print("")
-    print(" ", end=" ")
+
+    print("  ", end=" ")
     for i in range(len(grid[0])):
         print(str(i), end=" ")
     print("")
+
 
 def accept_valid_bullet_placement():
     """Will get valid row and column to place bullet shot"""
@@ -161,6 +165,7 @@ def accept_valid_bullet_placement():
 
     return row, col
 
+
 def check_for_ship_sunk(row, col):
     """If all parts of a ship are shot it will sink"""
     global ship_positions
@@ -169,16 +174,16 @@ def check_for_ship_sunk(row, col):
     for position in ship_positions:
         start_row = position[0]
         end_row = position[1]
-        start_col = position[2] 
+        start_col = position[2]
         end_col = position[3]
         if start_row <= row <= end_row and start_col <= col <= end_col:
-            
+           
             for r in range(start_row, end_row):
                 for c in range(start_col, end_col):
                     if grid[r][c] != "X":
                         return False
-
     return True
+
 
 def shoot_bullet():
     """Will update grid and ships according on where the bullet is shot"""
@@ -204,6 +209,7 @@ def shoot_bullet():
 
     bullets_left -= 1
 
+
 def check_for_game_over():
     """When all ships are sunk or we have run out of bullets, it's game over"""
     global num_of_ships_sunk
@@ -217,6 +223,7 @@ def check_for_game_over():
     elif bullets_left <= 0:
         print("You ran out of bullets and lost! Try again next time!")
         game_over = True
+
 
 def main():
     """Main entry point of the application, will run the game loop"""
