@@ -2,7 +2,7 @@ import random
 import time
 
 """
-    ------ BATTLESHIPS------
+    ------BATTLESHIPS------
     Pre-reqs: Loops, Strings, Arrays, 2D Arrays, Global Variables, Methods
     How the game works:
     1. A 10x10 grid will have an 8 ship varible length randomly placed about
@@ -37,6 +37,7 @@ num_of_ships_sunk = 0
 ship_positions = [[]]
 # Global variable for alphabet
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 
 def validate_grid_and_place_ship(start_row, end_row, start_col, end_col):
     """Will check the row or column to see if it is safe to place a ship there"""
@@ -213,13 +214,13 @@ def shoot_bullet():
         print("You missed!")
         grid[row][col] = "#"
     elif grid[row][col] == "O":
-         print("You hit!", end=" ")
-         grid[row][col] = "X"
-         if check_for_ship_sunk(row, col):
-             print("You sunk a ship!")
-             num_of_ships_sunk += 1
-         else: 
-             print("A ship was shot!")
+        print("You hit!", end=" ")
+        grid[row][col] = "X"
+        if check_for_ship_sunk(row, col):
+            print("You sunk a ship!")
+            num_of_ships_sunk += 1
+        else:
+            print("A ship was shot!")
 
     bullets_left -= 1
 
@@ -243,7 +244,7 @@ def main():
     """Main entry point of the application, will run the game loop"""
     global game_over
 
-    print("-----Welcome to Battleships------")
+    print("-----Welcome to Battleships-----")
     print("You have 50 bullets to take down 8 ships, may the battle begin!")
 
     create_grid()
