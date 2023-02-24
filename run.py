@@ -2,6 +2,18 @@ import random
 import time
 
 """
+    ------ BATTLESHIPS------
+    Pre-reqs: Loops, Strings, Arrays, 2D Arrays, Global Variables, Methods
+    How the game works:
+    1. A 10x10 grid will have an 8 ship varible length randomly placed about
+    2. With 50 bullets you will have to take down the placed down ships
+    3. To indicate where to shoot you will choose a row and column, such as C2
+    4. Every hit or miss that is shot will show up on the grid
+    5. Ships cannot be placed diagonally, if a shot hits then the rest of 
+        the ship will be in one of 4 directions, left, right, up, and down
+    6. If you find all ships before using up all your bullets, you win
+        else, you lose
+
 Battleships game legend:
 1. "." = for water and empty space
 2. "O" = part of a ship
