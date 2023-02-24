@@ -11,7 +11,7 @@ grid = [[]]
 # Global variable for grid size
 grid_size = 10
 # Global variable for number of ships to place
-num_of_ships = 8
+num_of_ships = 2
 # Global variable for bullets left
 bullets_left = 50
 # Global variable for game over
@@ -177,7 +177,7 @@ def check_for_ship_sunk(row, col):
         start_col = position[2]
         end_col = position[3]
         if start_row <= row <= end_row and start_col <= col <= end_col:
-           
+         
             for r in range(start_row, end_row):
                 for c in range(start_col, end_col):
                     if grid[r][c] != "X":
