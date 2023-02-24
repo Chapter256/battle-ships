@@ -164,7 +164,7 @@ def accept_valid_bullet_placement():
         if not row.isalpha() or not col.isnumeric():
             print("Error: Please enter letter (A-J) for row and (0-9) for column")
             continue
-        col = int(col)
+        row = alphabet.find(row)
         if not (-1 < row < grid_size):
             print("Error: Please enter letter (A-J) for row and (0-9) for column")
             continue
