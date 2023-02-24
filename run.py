@@ -73,7 +73,7 @@ def try_to_place_ship_on_grid(row, col, direction, length):
 
 def create_grid():
     """Will create a 10x10 grid and randomly place down ships
-    of different sizes in different directions"""
+       of different sizes in different directions"""
     global grid
     global grid_size
     global num_of_ships
@@ -138,7 +138,7 @@ def accept_valid_bullet_placement():
     is_valid_placement = False
     row = -1
     col = -1
-    while is_valid_placement is False: 
+    while is_valid_placement is False:
         placement = input("Enter row (A-J) and column (0-9) such as A3: ")
         placement = placement.upper()
         if len(placement) <= 0 or len(placement) > 2:
@@ -170,7 +170,7 @@ def check_for_ship_sunk(row, col):
     """If all parts of a ship are shot it will sink"""
     global ship_positions
     global grid
-    
+
     for position in ship_positions:
         start_row = position[0]
         end_row = position[1]
@@ -242,8 +242,8 @@ def main():
         print("----------------------------")
         print("")
         check_for_game_over()
-  
-   
+
+
 if __name__ == '__main__':
     """Will be called when program is being run from the terminal"""
     main()
